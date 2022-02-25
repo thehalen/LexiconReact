@@ -22,7 +22,7 @@ namespace LexiconA11.Models
 
         public CountryModel()
         {
-            CountryId = GetNewID();
+            Cities = new();
         }
     }
 }

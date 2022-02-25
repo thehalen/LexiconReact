@@ -34,5 +34,17 @@ namespace LexiconA11.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public IActionResult Add(LanguageViewModel g)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Languages.Add(new LanguageModel() { Name = g.LanguageToAdd});
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return StatusCode(400);
+        }
     }
 }

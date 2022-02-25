@@ -27,7 +27,7 @@ namespace LexiconA11.Models
 
         public CityModel()
         {
-            Counter = GetNewID();
+            Persons = new();
         }
     }
 }
