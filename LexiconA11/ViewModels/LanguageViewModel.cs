@@ -9,7 +9,7 @@ namespace LexiconA11.Models
 {
     public class LanguageViewModel
     {
-        public string LanguageToAdd { get; set; }
+
         private List<LanguageModel> _languages;
         public List<LanguageModel> Languages
         {
@@ -18,6 +18,7 @@ namespace LexiconA11.Models
                 return _languages;
             }
             set => _languages = value; }
+
 
     }
 }

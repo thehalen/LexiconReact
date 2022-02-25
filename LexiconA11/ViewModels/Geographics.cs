@@ -11,8 +11,6 @@ namespace LexiconA11.Models
     {
         [Display(Name = "Name")]
         public string Name { get; set; }
-        public int idToAdd { get; set; }
-
 
         private List<CityModel> _cities;
         public List<CityModel> CityList

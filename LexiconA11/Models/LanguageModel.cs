@@ -24,7 +24,7 @@ namespace LexiconA11.Models
 
         public LanguageModel()
         {
-            Persons = new();
+            Counter = GetNewID();
         }
     }
 }

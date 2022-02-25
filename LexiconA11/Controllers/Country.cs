@@ -37,16 +37,5 @@ namespace LexiconA11.Controllers
 
             return RedirectToAction("Index");
         }
-        [HttpPost]
-        public IActionResult Add(Geographics g)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Countries.Add(new CountryModel() { Name = g.Name });
-                _context.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return StatusCode(400);
-        }
     }
 }

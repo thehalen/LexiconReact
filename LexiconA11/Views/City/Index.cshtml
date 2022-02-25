@@ -5,20 +5,25 @@
 
 <h2>Cities</h2>
 
-<form class="form" id="person" asp-controller="City" asp-action="Add" method="post">
+@*<form class="form" id="filter" asp-controller="EntityPersons" asp-action="Index" method="post">
+    @Html.AntiForgeryToken()
+    <label asp-for="filterN">Name filter:</label>
+    <input asp-for="filterN" type="text" id="filterN" name="filterN" />
+    <label asp-for="filterC">City filter:</label>
+    <input asp-for="filterC" type="text" id="filterC" name="filterC" />
+    <input class="btn btn-primary" type="submit" value="Search" />
+</form>*@
+
+@*<form class="form" id="person" asp-controller="EntityPersons" asp-action="AddPerson" method="post">
     @Html.AntiForgeryToken()
     <label asp-for="Name">Name</label>
     <input asp-for="Name" type="text" id="Name" name="Name" required />
-    <label asp-for="idToAdd">Country:</label>
-    <select id="idToAdd" asp-for="idToAdd" name="idToAdd" >
-        <option value="" hidden="hidden">Choose country</option>
-        @foreach (CountryModel cm in Model.CountryList)
-        {
-            <option value="@cm.CountryId">@cm.Name</option>
-        }
-        </select>
-    <input class="btn btn-primary" type="submit" value="Add" />
-</form>
+    <label asp-for="City">City:</label>
+    <input asp-for="City" type="text" id="City" name="City" required />
+    <label asp-for="PhoneNr">Phone:</label>
+    <input asp-for="PhoneNr" type="text" id="PhoneNr" name="PhoneNr" required />
+    <input class="btn btn-primary" type="submit" value="AddPerson" />
+</form>*@
 
 
 
