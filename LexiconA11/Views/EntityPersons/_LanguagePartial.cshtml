@@ -1,0 +1,9 @@
+﻿@model PersonModel
+
+<div class="row">
+    <div class="col-1"> @Html.DisplayFor(model => model.PersonId)</div>
+    <div class="col-3"> @Html.DisplayFor(model => model.Name)</div>
+    <div class="col-3">@Html.DisplayFor(model => model.PhoneNr)</div>
+    <div class="col-3">@Html.DisplayFor(model => model.City.Name)</div>
+
+</div>

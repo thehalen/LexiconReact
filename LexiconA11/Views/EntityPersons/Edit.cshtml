@@ -1,0 +1,36 @@
+﻿@model PersonModel
+@{
+    ViewData["Title"] = "Edit person";
+}
+
+<h2>Personal information</h2>
+
+
+<form class="form" id="person" asp-controller="EntityPersons" asp-action="Update" method="post">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <input type="hidden" asp-for="PersonId" />
+        <input type="hidden" asp-for="Languages" />
+        <input type="hidden" asp-for="CityId" />
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" type="text" id="Name" name="Name" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="City.Name">City:</label>
+        <input asp-for="City.Name" type="text" id="City" name="City" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="PhoneNr">Phone:</label>
+        <input asp-for="PhoneNr" type="text" id="PhoneNr" name="PhoneNr" required />
+    </div>
+    <div class="form-group">
+        <label>Languages: @Model.Languages.Count()</label>
+        <label asp-for="AddLang">Add Language:</label>
+        <input asp-for="AddLang" type="text" id="AddLang" name="AddLang" />
+    </div>
+
+    <div class="form-group">
+        <input class="btn btn-primary" type="submit" value="Save" />
+    </div>
+</form>
+
